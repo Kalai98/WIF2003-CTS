@@ -17,7 +17,7 @@ document.getElementById('add-question').addEventListener('click', function () {
     <div class="card bg-light mt-2">
         <div class="card-header">
             <span class="h4">Student ` + i + `</span>
-            <p class="float-right btn btn-outline-dark btn-sm" onclick="removeElement('question-area', 'del-question-` + i +`')" ><span class=""><i class="fas fa-trash-alt"></i></span></p>
+            <p class="float-right btn btn-outline-dark btn-sm" onclick="removeElement('question-area', 'del-question-` + i +`')" ><span class=""><i class="fas fa-times"></i></span></p>
         </div>
 
         <div class="card-body">
