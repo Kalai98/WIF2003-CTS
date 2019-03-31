@@ -1,0 +1,38 @@
+footer {
+    background-color: transparent;
+    float: left;
+    width: 100%;
+}
+
+h1 {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 50px;
+    color: black;
+}
+
+.man {
+    border: 2px white;
+    border-top-style: solid;
+    border-bottom-style: solid;
+
+
+}
+
+p {
+    text-align: center;
+    color: black;
+
+}
+
+.main {
+    position: relative;
+    background-image: url(../images/main.png);
+    background-size: 100% 100%
+}
+
+.bg-4 {
+    padding: 2em 0;
+    background-color: #2f2f2f;
+    color: #fff;
+}

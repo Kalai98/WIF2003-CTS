@@ -1,31 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to CTS Test</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Question Page</title>
+    <link rel="stylesheet" href="../css/landing.css">
 </head>
 
 <body>
-    <div class="container mt-5 text-center">
-        <h1 class="h1">Welcome to Critical Thinking Skills</h1>
-        <div class="card mt-5">
-            <div class="card-body">
-                <p>You are required to answer all the questions</p>
-            </div>
+    <div class="main" style="height: 100vh;">
+        <h1>Welcome to CTS Test!</h1>
+        <div class="container">
+            <header class="p-2">
+                <p class="lead">A Critical Thinking test, also known as a critical reasoning test,
+                    determines your ability to reason through an argument logically
+                    and make an objective decision. You may be required to assess a
+                    situation, recognize assumptions being made, create hypotheses,
+                    and evaluate arguments.
+                </p>
+            </header>
+
+
+            <section class="man text-center p-5">
+                <h2 class="mt-5">Are you ready?</h2>
+                <a href="q1.html" class="mb-5 btn btn-outline-dark">Start</a>
+            </section>
+
+            <section class="p-2">
+                <p class="lead">What questions can I expect?
+                    Questions are very likely to be based on the Watson and Glaser
+                    Critical Thinking Appraisal model, which contains five sections
+                    specially designed to find out how good an individual is at reasoning
+                    analytically and logically. The five sections are:
+                </p>
+            </section>
+
+
+            <nav class="">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link bg-dark text-white" href="#text-1">Arguments</a></li>
+                    <li class="page-item"><a class="page-link bg-dark text-white" href="#text-2">Assumptions</a></li>
+                    <li class="page-item"><a class="page-link bg-dark text-white" href="#text-3">Deductions</a></li>
+                    <li class="page-item"><a class="page-link bg-dark text-white" href="#text-4">Interpretions</a></li>
+                    <li class="page-item"><a class="page-link bg-dark text-white" href="#text-5">Inferences</a></li>
+                </ul>
+            </nav>
         </div>
-        <a href="q1.html" class="btn btn-lg btn-primary btn-block mt-3">Start</a>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <div class="container text-justify">
+
+        <div id="text-1" class="row p-5 align-items-center" style="height: 50vh;">
+            <div class="col-5">
+                <h3 class="h1 text-left">Arguments</h1>
+            </div>
+            <div class="col-7">
+                <p class="lead text-justify">
+                    In the argument section you are tested on your ability
+                    to distinguish between arguments that are strong and arguments that are weak.
+                    For an argument to be strong, it must be both important and directly related
+                    to the question. An argument is weak if it is not directly related to the question,
+                    of minor importance, or it confuses correlation with causation
+                    (which is incorrectly assuming that just because two things are related,
+                    they are the cause of each other).
+                </p>
+            </div>
+        </div>
+
+        <div id="text-2" class="row p-5 align-items-center" style="height: 50vh;">
+            <div class="col-7">
+
+                <p class="lead text-justify">
+                    An assumption is something we take for granted. People make many assumptions
+                    which may not necessarily be correct being able to identify these is a key aspect of
+                    critical reasoning. An assumption question will include a statement and a number of
+                    assumptions. You are required to identify whether an assumption has been made or not.
+                </p>
+            </div>
+            <div class="col-5">
+                <h3 class="h1 text-right">Assumptions</h1>
+            </div>
+        </div>
+
+        <div id="text-3" class="row p-5 align-items-center" style="height: 50vh;">
+            <div class="col-5">
+                <h3 class="h1 text-left">Deductions</h1>
+            </div>
+            <div class="col-7">
+                <p class="lead text-justify">
+                    In deduction questions you have to draw conclusions based on only
+                    the information given in the question and not your own knowledge. You will be
+                    provided with a small passage of information and you will need to evaluate a
+                    conclusion made based on that passage. If the conclusion cannot be drawn from
+                    the information given, then the conclusion does not follow.
+                </p>
+            </div>
+        </div>
+
+        <div id="text-4" class="row p-5 align-items-center" style="height: 50vh;">
+            <div class="col-7">
+                <p class="lead text-justify">
+                    In these questions you are given a passage of information followed
+                    by a proposed conclusion. You are to regard the information you are given as true
+                    and decide whether the proposed conclusion logically and beyond doubt follows
+                </p>
+            </div>
+            <div class="col-5">
+                <h3 class="h1 text-right">Interpretation</h1>
+            </div>
+        </div>
+
+        <div id="text-5" class="row p-5 align-items-center" style="height: 50vh;">
+            <div class="col-5">
+                <h3 class="h1 text-left">Inferences</h1>
+            </div>
+            <div class="col-7">
+                <p class="lead text-justify">
+                    Inference is a conclusion drawn from supposed or observed facts.
+                    It is information that does not appear directly in the given information,
+                    but is drawn from it. If, for instance, we go to a public restroom and find the door locked,
+                    we will assume/make the inference that it is occupied.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer class="bg-4 text-center">
+        Copyright &copy 2019 Web Programming
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
