@@ -1,43 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous">
-
-  <link href="css/login.css" rel="stylesheet">
-
-  <title>Web Programming</title>
+  <title>Welcome to CTS!</title>
 </head>
 
 <body>
+  <!-- First Container -->
+  <section class="bg-1 text-center">
+    <div class="container">
+      <h3 class="h3 mb-3">Critical Thinking Skills</h3>
+      <img src="images/logo.png" class="img-responsive" style="display:inline">
+      <blockquote class="blockquote mt-5">
+        <p class="mb-0">If there was one life skill everyone on the planet needed, it was the ability to think with
+          critical objectivity.</p>
+        <footer class="blockquote-footer text-white">Josh Lanyon</footer>
+      </blockquote>
+      <a id="get-started" href="login.html" class="btn btn-lg btn-outline-light mt-5">Get Started</a>
+    </div>
+  </section>
 
-  <div class="container text-center">
-    <form class="form-signin">
-      <h3 class="h3 mb-3 font-weight-normal">Login Page</h3>
-      <label for="inputEmail" class="sr-only">Username or Email</label>
-      <input type="text" id="inputEmail" class="form-control" placeholder="Username or Email" required autofocus>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control mb-3" placeholder="Password" required>
-      <button class="btn btn-primary btn-block mb-2" type="submit"><a href="admin" class="text-white">Login</a></button>
-      <button class="btn btn-primary btn-block mb-2" type="submit"><a href="questions" class="text-white">Start</a></button>
-      <p class="h6">or</p>
-      <a href="signup.html">Create new a account</a>
-    </form>
-  </div>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <!-- Second Container -->
+  <section class="bg-2">
+    <div class="container">
+      <h3 class="h3 text-center">What is Critical Thinking?</h3>
+      <p class="text-justify lead">The Skills We Need for Critical Thinking. The skills that we need in order to be able
+        to think critically are
+        varied and include observation, analysis, interpretation, reflection, evaluation, inference, explanation,
+        problem
+        solving, and decision making.</p>
+    </div>
+  </section>
+
+  <!-- Third Container (Grid) -->
+  <section class="bg-3">
+    <div id="third" class="container text-center">
+      <h3 class="text-center">About Critical Thinking</h3>
+
+      <div class="card mt-3">
+        <div class="card-body">
+          <p class="lead">Critical thinking is thinking about things in certain ways so as to arrive at the best
+            possible
+            solution in
+            the circumstances that the thinker is aware of.</p>
+          <img src="images/picture1.png">
+        </div>
+      </div>
+
+      <div class="card mt-3">
+        <div class="card-body">
+          <p class="lead">Good critical thinkers can draw reasonable conclusions from a set of information and
+            discriminate between
+            useful and less useful details.</p>
+          <img src="images/picture2.jpg" class="mb-5">
+        </div>
+      </div>
+
+      <div class="card mt-3">
+        <div class="card-body">
+          <p class="lead">Critical thinking involves the evaluation of sources such as data, facts, observable
+            phenomenon, and research
+            findings.</p>
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HnJ1bqXUnIM" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container-fluid bg-4 text-center">
+    Copyright &copy 2019 Web Programming
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>

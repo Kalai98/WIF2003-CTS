@@ -1,0 +1,43 @@
+body {
+  font-family: Montserrat, sans-serif;
+  color: #f5f6f7;
+  /* background: #1abc9c; */
+}
+
+#get-started{
+  border-radius: 100px;
+}
+
+#get-started:hover{
+  color: #1abc9c;
+}
+
+#third img{
+  width: 70%;
+}
+
+.bg-1 {
+  background: #1abc9c;
+  color: #ffffff;
+  padding: 5em 0;
+  height: 100vh;
+}
+
+.bg-2 {
+  padding: 5em 0;
+  height: 50vh;
+  background: #474e5d;
+  color: #ffffff;
+}
+
+.bg-3 {
+  padding: 5em 0;
+  background-color: #ffffff;
+  color: #555555;
+}
+
+.bg-4 {
+  padding: 2em 0;
+  background-color: #2f2f2f;
+  color: #fff;
+}
