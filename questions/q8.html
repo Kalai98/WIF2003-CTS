@@ -14,67 +14,70 @@
 </head>
 
 <body>
-    
-        <br>
-        <div class="container">
-            <h1 class="display-4">Question 8</h1>
-    
-            <div class="jumbotron">
-                <div class="container">
-                    <p class="lead">There are four people: A, B, C, and D. They are predicting the future career for each other: dancer,
-                        fortune teller, novelist, and TV host. Based on their statements given below, only the statement
-                        given by the fortune teller is true.</p>
-                    <ul class="list-group">
-                        <li class="list-group-item">A: B will absolutely never become a dancer.</li>
-                        <li class="list-group-item">B: C will become a fortune teller.</li>
-                        <li class="list-group-item">C: D will never become a TV host.</li>
-                        <li class="list-group-item">D: I’ll marry Mr. P</li>
-                    </ul>
-                    <p class="lead mt-5"><i>Question</i>: <strong>What are the respective career of A, B, C, and D, and will D marry Mr. P?</strong>
-                    </p>
-                    <hr class="my-4">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">The career of A:</label>
-                        </div>
-                        <input type="text" class="form-control">
+
+    <br>
+    <div class="container">
+        <p>Timer: <span id="demo"></span></p>
+        <h1 class="display-4">Question 8</h1>
+
+        <div class="jumbotron">
+            <div class="container">
+                <p class="lead">There are four people: A, B, C, and D. They are predicting the future career for each
+                    other: dancer,
+                    fortune teller, novelist, and TV host. Based on their statements given below, only the statement
+                    given by the fortune teller is true.</p>
+                <ul class="list-group">
+                    <li class="list-group-item">A: B will absolutely never become a dancer.</li>
+                    <li class="list-group-item">B: C will become a fortune teller.</li>
+                    <li class="list-group-item">C: D will never become a TV host.</li>
+                    <li class="list-group-item">D: I’ll marry Mr. P</li>
+                </ul>
+                <p class="lead mt-5"><i>Question</i>: <strong>What are the respective career of A, B, C, and D, and will
+                        D marry Mr. P?</strong>
+                </p>
+                <hr class="my-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">The career of A:</label>
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">The career of B:</label>
-                        </div>
-                        <input type="text" class="form-control">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">The career of B:</label>
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">The career of C:</label>
-                        </div>
-                        <input type="text" class="form-control">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">The career of C:</label>
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">The career of D:</label>
-                        </div>
-                        <input type="text" class="form-control">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">The career of D:</label>
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <input type="checkbox">
-                            </div>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox">
                         </div>
-                        <input type="text" class="form-control" readonly placeholder="D will marry Mr. P">
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <input type="checkbox">
-                            </div>
+                    <input type="text" class="form-control" readonly placeholder="D will marry Mr. P">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox">
                         </div>
-                        <input type="text" class="form-control" readonly placeholder="D will NOT marry Mr. P">
                     </div>
+                    <input type="text" class="form-control" readonly placeholder="D will NOT marry Mr. P">
                 </div>
             </div>
+        </div>
 
         <div class="form-group row">
             <div class="col-sm-10">
@@ -87,6 +90,7 @@
     </div>
 
     <!-- Optional JavaScript -->
+    <script src="../js/timer.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
