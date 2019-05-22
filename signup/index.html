@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -17,82 +18,103 @@
 <body>
     <div class="container mt-5">
         <h3 class="h3 mb-3">Sign In (Section A)</h3>
-        <form>
+        <form action="signup.php" method="POST">
             <div class="form-group row">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Registration Number</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Matric No.</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPassword3" placeholder="Matric No.">
+                    <input type="text" class="form-control" name = "matricNo" id="inputPassword3" placeholder="Matric No.">
                 </div>
             </div>
-            <div class="form-group row">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Name of University</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPassword3" placeholder="Name of University">
-                </div>
-            </div>
+          
             <div class="form-group row">
                 <div class="col-sm-2">Year of Study</div>
                 <div class="col-sm-10">
-                    <select class="custom-select" id="inputGroupSelect01">
-                        <option selected disabled>Choose...</option>
-                        <option value="1">First</option>
-                        <option value="2">Second</option>
-                        <option value="2">Third</option>
-                        <option value="2">Fourth</option>
+                    <select name = "yearStudy" class="custom-select" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="First">First</option>
+                        <option value="Second">Second</option>
+                        <option value="Third">Third</option>
+                        <option value="Fourth">Fourth</option>
                     </select>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-2">Gender</div>
                 <div class="col-sm-10">
-                    <select class="custom-select" id="inputGroupSelect01">
+                    <select name = "gender" class="custom-select" id="inputGroupSelect01">
                         <option selected>Choose...</option>
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Female" >Female</option>
                     </select>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-2">Age Group</div>
                 <div class="col-sm-10">
-                    <select class="custom-select" id="inputGroupSelect01">
+                    <select name = "age" class="custom-select" id="inputGroupSelect01">
                         <option selected>Choose...</option>
-                        <option value="1">Below 18 Years</option>
-                        <option value="2">18-21 Years</option>
-                        <option value="2">22-25 Years</option>
-                        <option value="2">Above 25 Years</option>
+                        <option value="Below 18 Years">Below 18 Years</option>
+                        <option value="18-21 Years">18-21 Years</option>
+                        <option value="22-25 Years">22-25 Years</option>
+                        <option value="Above 25 Years">Above 25 Years</option>
                     </select>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-2">Ethnic Group</div>
                 <div class="col-sm-10">
-                    <select class="custom-select" id="inputGroupSelect01">
+                    <select name = "ethnicGroup" class="custom-select" id="inputGroupSelect01">
                         <option selected>Choose...</option>
-                        <option value="1">Malay</option>
-                        <option value="2">Chinese</option>
-                        <option value="2">Indian</option>
-                        <option value="2">Others</option>
+                        <option value="Malay">Malay</option>
+                        <option value="Malay">Chinese</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Others">Others</option>
                     </select>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-2">Nationailty</div>
                 <div class="col-sm-10">
-                    <select class="custom-select" id="inputGroupSelect01">
+                    <select name = "nationality" class="custom-select" id="inputGroupSelect01">
                         <option selected>Choose...</option>
-                        <option value="1">Malaysian</option>
-                        <option value="2">Chinese (China)</option>
-                        <option value="2">Indonesian</option>
-                        <option value="2">Pakistani</option>
-                        <option value="2">Others</option>
+                        <option value="Malaysian">Malaysian</option>
+                        <option value="Others">Others</option>
                     </select>
                 </div>
             </div>
-            
+
+            <div class="form-group row">
+                    <label for="username" class="col-sm-2 col-form-label">Username</label>
+                    <div class="col-sm-10">
+                        <input name="username" type="text" class="form-control" id="username" placeholder="Username">
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                    <label for="password" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                    <label for="confirmPassword" class="col-sm-2 col-form-label">Confirm Password</label>
+                    <div class="col-sm-10">
+                        <input name="confirmPassword" type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                    </div>
+            </div>
+
+
             <div class="form-group row">
                 <div class="col-sm-10">
-                    <a class="btn btn-primary text-white mr-2" href="past-year.html">Next</a>
+                    <button type ="submit" name = "submit" class="btn btn-primary text-white mr-2">Submit</button>
                     <a href="../login.html">Cancel</a>
                 </div>
             </div>
