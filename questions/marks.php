@@ -1,3 +1,27 @@
+<?php 
+
+$a1 = $_POST['a1'];
+$a2 = $_POST['a2'];
+$a31 = $_POST['a31'];
+$a32 = $_POST['a32'];
+$a4 = $_POST['a4'];
+$a5 = $_POST['a5'];
+$a6 = $_POST['a6'];
+$a81 = $_POST['a81'];
+$a82 = $_POST['a82'];
+$a83 = $_POST['a83'];
+$a84 = $_POST['a84'];
+$a85 = $_POST['a85'];
+$a91 = $_POST['a91'];
+$a92 = $_POST['a92'];
+$a10 = $_POST['a10'];
+
+$duration = $_POST['duration'];
+$startTime = $_POST['startTime'];
+$stopTime = $_POST['stopTime'];
+
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -23,7 +47,7 @@
                     <tbody>
                         <tr>
                             <th>Started on</th>
-                            <td>Monday, 25 March 2019, 3:14 PM</th>
+                            <td><?php echo $startTime ?></th>
                         </tr>
                         <tr>
                             <th>State</th>
@@ -31,11 +55,11 @@
                         </tr>
                         <tr>
                             <th>Completed on</th>
-                            <td>Monday, 25 March 2019, 3:41 PM</td>
+                            <td><?php echo $stopTime ?></td>
                         </tr>
                         <tr>
                             <th>Time taken</th>
-                            <td>26 mins 45 secs</td>
+                            <td><?php echo $duration ?></td>
                         </tr>
                         <tr>
                             <th>Grade</th>
