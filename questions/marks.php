@@ -1,24 +1,24 @@
 <?php 
 
-$a1 = $_POST['a1'];
-$a2 = $_POST['a2'];
-$a31 = $_POST['a31'];
-$a32 = $_POST['a32'];
-$a4 = $_POST['a4'];
-$a5 = $_POST['a5'];
-$a6 = $_POST['a6'];
-$a81 = $_POST['a81'];
-$a82 = $_POST['a82'];
-$a83 = $_POST['a83'];
-$a84 = $_POST['a84'];
-$a85 = $_POST['a85'];
-$a91 = $_POST['a91'];
-$a92 = $_POST['a92'];
-$a10 = $_POST['a10'];
+echo $a1 = $_POST['a1'];
+echo $a2 = $_POST['a2'];
+echo $a31 = $_POST['a31'];
+echo $a32 = $_POST['a32'];
+echo $a4 = $_POST['a4'];
+echo $a5 = $_POST['a5'];
+echo $a6 = $_POST['a6'];
+echo $a81 = $_POST['a81'];
+echo $a82 = $_POST['a82'];
+echo $a83 = $_POST['a83'];
+echo $a84 = $_POST['a84'];
+echo $a85 = $_POST['a85'];
+echo $a91 = $_POST['a91'];
+echo $a92 = $_POST['a92'];
+echo $a10 = $_POST['a10'];
 
-$duration = $_POST['duration'];
-$startTime = $_POST['startTime'];
-$stopTime = $_POST['stopTime'];
+echo $duration = $_POST['duration'];
+echo $startTime = $_POST['startTime'];
+echo $stopTime = $_POST['stopTime'];
 
 
 ?>
