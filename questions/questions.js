@@ -59,6 +59,7 @@ function checkIfLastPage(current) {
 //-------------------------------------------------Timer------------------------------------------------//
 // Set the date we're counting down to
 var countDownDate = new Date().getTime() + (3600 * 1000);
+localStorage.clear();
 localStorage.setItem('Start Time', getCurrentTime());
 
 // Update the count down every 1 second
@@ -131,18 +132,8 @@ for (var i = 0; i < storageLength; i++) {
 
 function saveToLocalStorage(id) {
 
-    if (document.getElementsByClassName(id).name == 'radio') {
-        var radios = document.getElementsByClassName(id);
-        console.log(radios);
-        for (i = 0; i < radios.length; i++) {
-            if (radios[i].checked) {
-                localStorage.setItem(id, radios.value);
-            }
-        }
-    } else {
-        var val = document.getElementById(id).value;
-        val == null ? localStorage.setItem(id, ' ') : localStorage.setItem(id, val);
-    }
+    var val = document.getElementById(id).value;
+    val == null ? localStorage.setItem(id, ' ') : localStorage.setItem(id, val);
 
     if (id == 'a31' || id == 'a32') {
         var isAnswered = localStorage.getItem('a31') && localStorage.getItem('a32');
@@ -191,26 +182,16 @@ function showAllAns() {
 
     for (var i = 1; i < storageLength; i++) {
         var id = 'a' + i;
-        if (i == 3) {
-            if (localStorage.getItem('a3') == 'true') {
-                document.getElementById(id + '1a').innerHTML = localStorage.getItem(id + '1');
-                document.getElementById(id + '2a').innerHTML = localStorage.getItem(id + '2');
-            }
+        if (i == 3 || i == 9) {
+            document.getElementById(id + '1a').innerHTML = localStorage.getItem(id + '1');
+            document.getElementById(id + '2a').innerHTML = localStorage.getItem(id + '2');
             checkAnswered(id);
         } else if (i == 8) {
-            if (localStorage.getItem('a8') == 'true') {
-                document.getElementById(id + '1a').innerHTML = localStorage.getItem(id + '1');
-                document.getElementById(id + '2a').innerHTML = localStorage.getItem(id + '2');
-                document.getElementById(id + '3a').innerHTML = localStorage.getItem(id + '3');
-                document.getElementById(id + '4a').innerHTML = localStorage.getItem(id + '4');
-                document.getElementById(id + '5a').innerHTML = localStorage.getItem(id + '5');
-            }
-            checkAnswered(id);
-        } else if (i == 9) {
-            if (localStorage.getItem('a9') == 'true') {
-                document.getElementById(id + '1a').innerHTML = localStorage.getItem(id + '1');
-                document.getElementById(id + '2a').innerHTML = localStorage.getItem(id + '2');
-            }
+            document.getElementById(id + '1a').innerHTML = localStorage.getItem(id + '1');
+            document.getElementById(id + '2a').innerHTML = localStorage.getItem(id + '2');
+            document.getElementById(id + '3a').innerHTML = localStorage.getItem(id + '3');
+            document.getElementById(id + '4a').innerHTML = localStorage.getItem(id + '4');
+            document.getElementById(id + '5a').innerHTML = localStorage.getItem(id + '5');
             checkAnswered(id);
         }
         else {
@@ -222,7 +203,15 @@ function showAllAns() {
 }
 
 function checkAnswered(id) {
-    if (localStorage.getItem(id) == '' || localStorage.getItem(id) == null) {
+    if(id == 'a8'|| id == 'a9' || id == 'a3'){
+        if (localStorage.getItem(id) == 'false' || localStorage.getItem(id) == null) {
+            document.getElementById(id + 'b').innerHTML = 'Not Answered';
+            document.getElementById(id + 'b').parentElement.classList.add('table-danger');
+        } else {
+            document.getElementById(id + 'b').innerHTML = 'Answered';
+            document.getElementById(id + 'b').parentElement.classList.remove('table-danger');
+        }
+    } else if (localStorage.getItem(id) == '' || localStorage.getItem(id) == null) {
         document.getElementById(id + 'b').innerHTML = 'Not Answered';
         document.getElementById(id + 'b').parentElement.classList.add('table-danger');
     } else {
