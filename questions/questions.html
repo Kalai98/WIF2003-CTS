@@ -9,34 +9,34 @@
 <body>
 
   <div class="container">
-    <p class="btn btn-lg mt-3">Timer: <span id="demo"></span></p>
 
-    <nav id="navbar" class="center-button">
-      <ul class="pagination justify-content-center text-primary">
-        <li class="page-item" onclick="goTo(0)"><a class="page-link">1</a></li>
-        <li class="page-item" onclick="goTo(1)"><a class="page-link">2</a></li>
-        <li class="page-item" onclick="goTo(2)"><a class="page-link">3</a></li>
-        <li class="page-item" onclick="goTo(3)"><a class="page-link">4</a></li>
-        <li class="page-item" onclick="goTo(4)"><a class="page-link">5</a></li>
-        <li class="page-item" onclick="goTo(5)"><a class="page-link">6</a></li>
-        <li class="page-item" onclick="goTo(6)"><a class="page-link">7</a></li>
-        <li class="page-item" onclick="goTo(7)"><a class="page-link">8</a></li>
-        <li class="page-item" onclick="goTo(8)"><a class="page-link">9</a></li>
-        <li class="page-item" onclick="goTo(9)"><a class="page-link">10</a></li>
-      </ul>
-    </nav>
+    <form class="" method="POST" id="regForm" action="marks.php">
+      
+      <div class="jumbotron mt-3 shadow-lg bg-light">
+        <nav id="navbar" class="center-button">
+            <ul class="pagination pagination-lg justify-content-center text-dark">
+              <li class="page-item" onclick="goTo(0)"><a class="page-link">1</a></li>
+              <li class="page-item" onclick="goTo(1)"><a class="page-link">2</a></li>
+              <li class="page-item" onclick="goTo(2)"><a class="page-link">3</a></li>
+              <li class="page-item" onclick="goTo(3)"><a class="page-link">4</a></li>
+              <li class="page-item" onclick="goTo(4)"><a class="page-link">5</a></li>
+              <li class="page-item" onclick="goTo(5)"><a class="page-link">6</a></li>
+              <li class="page-item" onclick="goTo(6)"><a class="page-link">7</a></li>
+              <li class="page-item" onclick="goTo(7)"><a class="page-link">8</a></li>
+              <li class="page-item" onclick="goTo(8)"><a class="page-link">9</a></li>
+              <li class="page-item" onclick="goTo(9)"><a class="page-link">10</a></li>
+            </ul>
+          </nav>
 
-    <form method="POST" id="regForm" action="marks.php">
-
+          <p class="lead text-center" id="timer">Time Left: <span id="demo">60m 00s</span></p>
       <!-- Question 1 -->
-      <div class="tab">
-        <h1 class="display-4">Question 1</h1>
-        <div class="jumbotron border shadow">
+        <div class="tab">
+          <p class="display-4">Question 1</p>
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/can.gif" class="img-thumbnail " alt="Cinque Terre" width="304" height="236">
             </div>
-            <div class="container mt-3 shadow-lg" id="que">
+            <div class="container mt-3 bg-light shadow p-4">
               <p class="lead">There was a power failure in the house. Mrs. Lim lighted up 10 candles. After
                 sometime,
                 four candles
@@ -45,26 +45,25 @@
               </p>
             </div>
             <hr class="my-4">
-            <div class="input-group mb-3">
+            <div class="shadow shadow input-group mb-3">
               <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSelect01">Answer:</label>
+                <label class=" input-group-text" for="inputGroupSelect01">Answer:</label>
               </div>
               <input name="a1" id="a1" type="text" class="form-control" onchange="saveToLocalStorage('a1')">
             </div>
           </div>
         </div>
-      </div>
+      
 
       <!-- Question 2 -->
-      <div class="tab">
-
-        <h1 class="display-4">Question 2</h1>
-        <div class="jumbotron border shadow">
+    
+        <div class="tab">
+            <h1 class="display-4">Question 2</h1>
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/shakes.jpg" class="img-thumbnail " alt="shake hand" width="304" height="236">
             </div>
-            <div class="container mt-3 shadow-lg" id="que">
+            <div class="container mt-3 bg-light shadow p-4">
               <p class="lead">There are 20 people who love to solve puzzles. They met to solve puzzles together.
                 Among
                 them, three
@@ -78,7 +77,7 @@
               </p>
             </div>
             <hr class="my-4">
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Answer:</label>
               </div>
@@ -86,19 +85,17 @@
             </div>
           </div>
         </div>
-      </div>
 
       <!-- Question 3 -->
+      
       <div class="tab">
-
         <h1 class="display-4">Question 3</h1>
-        <div class="jumbotron border shadow">
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/birds.jpg" class="img-thumbnail " alt="birds" width="304" height="236">
               <img src="images_q/turtles.jpg" class="img-thumbnail " alt="turtles" width="338" height="236">
             </div>
-            <div class="container mt-3 shadow-lg" id="que">
+            <div class="container mt-3 bg-light shadow p-4"">
               <p class="lead pt-3">There are altogether 100 birds and turtles. The total number of legs is 276.
               </p>
               <p class="lead "><i>Question</i>: <strong>How many birds and turtles are there,
@@ -106,13 +103,13 @@
               </p>
             </div>
             <hr class="my-4">
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Number of birds:</label>
               </div>
               <input name="a31" id="a31" type="text" class="form-control" onchange="saveToLocalStorage('a31')">
             </div>
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Number of turtles:</label>
               </div>
@@ -120,14 +117,12 @@
             </div>
           </div>
         </div>
-      </div>
 
       <!-- Question 4 -->
       <div class="tab">
         <h1 class="display-4">Question 4</h1>
-        <div class="jumbotron border shadow">
           <div class="container">
-            <div class="container mt-3 shadow-lg" id="que">
+            <div class="container mt-3 bg-light shadow p-4">
               <p class="lead">Move the following numbers to make them equal, mathematically. Write your answer
                 below.
               </p>
@@ -136,7 +131,7 @@
               </h1>
             </div>
             <hr class="my-4">
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Answer:</label>
               </div>
@@ -144,17 +139,15 @@
             </div>
           </div>
         </div>
-      </div>
 
       <!-- Question 5 -->
       <div class="tab">
         <h1 class="display-4">Question 5</h1>
-        <div class="jumbotron border shadow">
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/distinction.jpg" class="img-thumbnail " alt="distinction" width="304" height="236">
             </div>
-            <div class="container shadow-lg mt-3" id="que">
+            <div class="container mt-3 bg-light shadow p-4">
               <p class="lead pt-3">There are four (4) students: A, B, C, and D. They are discussing about their
                 academic
                 results. A
@@ -168,7 +161,7 @@
               </p>
             </div>
             <hr class="my-4">
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Answer:</label>
               </div>
@@ -176,18 +169,16 @@
             </div>
           </div>
         </div>
-      </div>
 
       <!-- Question 6 -->
       <div class="tab">
         <h1 class="display-4">Question 6</h1>
-        <div class="jumbotron border shadow">
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/photo.jpg" class="img-thumbnail " alt="photo" width="340" height="236">
               <img src="images_q/box.jpg" class="img-thumbnail " alt="box" width="338" height="236">
             </div>
-            <div class="container shadow-lg mt-3" id="que">
+            <div class="container mt-3 bg-light shadow p-4" >
               <p class="lead pt-3">There are three (3) boxes: a gold box, a silver box, and a red box. On top of
                 each of
                 the boxes,
@@ -200,7 +191,7 @@
               <p class="lead "><i>Question</i>: <strong>Which box contains the photo?</strong></p>
             </div>
             <hr class="my-4">
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Answer:</label>
               </div>
@@ -208,18 +199,16 @@
             </div>
           </div>
         </div>
-      </div>
 
       <!-- Question 7 -->
       <div class="tab">
         <h1 class="display-4">Question 7</h1>
-        <div class="jumbotron border shadow">
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/woodenstick.jpg" class="img-thumbnail " alt="burning wooden stick" width="304"
                 height="236">
             </div>
-            <div class="container shadow-lg mt-3" id="que">
+            <div class="container mt-3 bg-light shadow p-4">
               <p class="lead pt-3">Two thin wooden sticks take one (1) hour to complete burning, respectively.
                 What is the
                 method you
@@ -227,7 +216,7 @@
               <p class="lead mt-5"><strong>Choose your answer based on the step given: </strong></p>
               <p class="">You can choose more than 1 answer if the step happens simultaneously.</p>
               <hr class="my-4">
-              <div class="input-group mb-3">
+              <div class="shadow input-group mb-3">
                 <ol>
                   <li>Burn 1 tip of one of the stick</li>
                   <li>Burn both tips of 1 of the stick</li>
@@ -300,15 +289,12 @@
               </div>
             </div>
           </div>
-        </div>
-
 
       </div>
 
       <!-- Question 8  -->
       <div class="tab">
         <h1 class="display-4">Question 8</h1>
-        <div class="jumbotron border shadow">
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/dancer.jpg" class="img-thumbnail " alt="photo" width="200" height="236">
@@ -316,7 +302,7 @@
               <img src="images_q/novelist.jpg" class="img-thumbnail " alt="box" width="200" height="236">
               <img src="images_q/tvhost.jpg" class="img-thumbnail " alt="box" width="200" height="236">
             </div>
-            <div class="container mt-3 shadow-lg" id="que">
+            <div class="container mt-3 bg-light shadow p-4" >
               <p class="lead pt-3">There are four people: A, B, C, and D. They are predicting the future career
                 for each
                 other: dancer,
@@ -340,31 +326,31 @@
               </p>
             </div>
             <hr class="my-4">
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">The career of A:</label>
               </div>
               <input name="a81" id="a81" type="text" class="form-control" onchange="saveToLocalStorage('a81')">
             </div>
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">The career of B:</label>
               </div>
               <input name="a82" id="a82" type="text" class="form-control" onchange="saveToLocalStorage('a82')">
             </div>
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">The career of C:</label>
               </div>
               <input name="a83" id="a83" type="text" class="form-control" onchange="saveToLocalStorage('a83')">
             </div>
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">The career of D:</label>
               </div>
               <input name="a84" id="a84" type="text" class="form-control" onchange="saveToLocalStorage('a84')">
             </div>
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <div class="input-group-text">
                   <input class="a85" name="a85" type="radio" onclick="radioToLocalStorage('a85')"
@@ -373,7 +359,7 @@
               </div>
               <input type="text" class="form-control" readonly placeholder="D will marry Mr. P">
             </div>
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <div class="input-group-text">
                   <input class="a85" name="a85" type="radio" onclick="radioToLocalStorage('a85')"
@@ -384,18 +370,16 @@
             </div>
           </div>
         </div>
-      </div>
 
       <!-- Question 9  -->
       <div class="tab">
         <h1 class="display-4">Question 9</h1>
-        <div class="jumbotron border shadow">
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/fatthin.jpg" class="img-thumbnail " alt="fat and thin brothers" width="304"
                 height="236">
             </div>
-            <div class="container shadow-lg mt-3" id="que">
+            <div class="container mt-3 bg-light shadow p-4">
               <p class="lead pt-3">There are two brothers, one of whom is fat and the other is thin. The elder
                 brother will
                 tell the
@@ -416,7 +400,7 @@
                   (the fat one or the thin one)?</strong></p>
             </div>
             <!-- <hr class="my-4"> -->
-            <div class="input-group mb-3">
+            <div class="mt-3 shadow input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">The time now is:</label>
               </div>
@@ -426,7 +410,7 @@
                 <option value="Morning">Morning</option>
               </select>
             </div>
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">The eldest brother is:</label>
               </div>
@@ -438,17 +422,15 @@
             </div>
           </div>
         </div>
-      </div>
 
       <!-- Question 10 -->
       <div class="tab">
         <h1 class="display-4">Question 10</h1>
-        <div class="jumbotron border shadow">
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/guard.jpg" class="img-thumbnail " alt="lion" width="304" height="236">
             </div>
-            <div class="container shadow-lg mt-3" id="que">
+            <div class="container mt-3 bg-light shadow p-4">
               <p class="lead pt-3">In a room, there are two men. One tells the truth and the other tells lie. You’re in
                 the
                 room, and
@@ -459,7 +441,7 @@
                   is the safe exit?</strong></p>
             </div>
             <hr class="my-4">
-            <div class="input-group mb-3">
+            <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="exampleFormControlTextarea1">Your Question: </label>
               </div>
@@ -467,12 +449,11 @@
             </div>
           </div>
         </div>
-      </div>
 
 
       <div id="" class="tab">
         <h1 class="">Review Question</h1>
-        <table class="table table-light table-hover table-borderless text-center">
+        <table class=" shadow table table-light table-hover table-borderless text-center">
           <thead>
             <tr class="d-flex bg-dark text-white">
               <th class="col-1" scope="col">No</th>
@@ -548,18 +529,17 @@
         </table>
       </div>
 
-      <div class="mb-5" style="overflow:auto;">
-        <div style="float:right;">
-          <button class="btn btn-primary" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-          <button class="btn btn-primary" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-        </div>
-      </div>
-
       <input name="duration" id="dur" type="hidden">
       <input name="startTime" id="startTime" type="hidden">
       <input name="stopTime" id="stopTime" type="hidden">
     </form>
-
+    <div class="mt-3 mb-3" style="overflow:auto;">
+        <div style="float:right;">
+          <button class="btn btn-secondary" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+          <button class="btn btn-secondary" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        </div>
+      </div>
+  </div>
 
   </div>
 

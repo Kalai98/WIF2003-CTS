@@ -1,25 +1,28 @@
- /* Hide all steps by default: */
+
+/* Hide all steps by default: */
 .tab {
     display: none;
 }
 
 .jumbotron {
-    background-image: url("images_q/que.png");
     background-size: cover;
 }
 
 body {
     background-image: url("images_q/bg.png");
+    background-image: url("images_q/que.png");
     background-size: cover;
-}
-
-#que {
-
-    background-color: rgba(130, 204, 238, 0.6);
-    color: #394652;
 }
 
 #table{
     background-image: url("images_q/cel.png");
     background-size: auto;
+}
+
+input:focus{
+    outline: none;
+}
+
+#timer{
+    padding: 1em;
 }

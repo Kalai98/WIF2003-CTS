@@ -51,24 +51,30 @@ form {
 }
 
 .box button{
- background: none;
- margin: 20px auto;
- display: block;
- text-align: center;
- border: 2px solid #F4C724;
- transition: 0.50s;
- transition-timing-function: ease-in-out;
- border-radius:  24px;
- width: 150px;
- padding: auto 10px;
- color: white;
- font-weight: bold;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  transition: 0.50s;
+  transition-timing-function: ease-in-out;
+  border-radius:  24px;
+  width: 200px;
+  padding: auto 10px;
+  font-weight: bold;
+  background: #F4C724;
+  border: 2px solid #F4C724;
+  color: #232323;
 }
 
 .box button:hover{
-  border: 2px solid #45CE30;
-  box-shadow: none;
-  display: block;
-  outline: none;
-  border-radius: 0px;
+  color: white;
+  background: none;
+}
+
+#link{
+  color: #EAF0F1;
+  text-decoration: none;
+}
+
+#link:hover{
+  color: #0A79DF;
 }

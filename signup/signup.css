@@ -52,11 +52,23 @@ body {
   }
   
   .btn1{
-    color: #3498db;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    transition: 0.50s;
+    transition-timing-function: ease-in-out;
+    border-radius:  24px;
+    width: 150px;
+    padding: auto 10px;
+    font-weight: bold;
+    background: #F4C724;
+    border: 2px solid #F4C724;
+    color: #232323;
   }
 
   .btn1:hover{
-    color: #fff;
+    color: white;
+    background: none;
   }
 
   .btn::before{
@@ -75,7 +87,12 @@ body {
   }
 
   #link{
-    font-family: "Monserrat" sans-serif;
+    color: #EAF0F1;
+    text-decoration: none;
+  }
+  
+  #link:hover{
+    color: #0A79DF;
   }
 
  
