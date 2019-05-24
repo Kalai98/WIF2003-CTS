@@ -1,7 +1,7 @@
 <?php
+require('../config/config.php');
 
 if (isset($_POST['submit'])){
-    require('../config/config.php');
     // session_start();
     $matricNo = mysqli_real_escape_string($conn,$_POST['matricNo']); 
     $yearStudy =mysqli_real_escape_string($conn,$_POST['yearStudy']);
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])){
       
       <div class="container">
         <h1>Thank you for register!</h1>
-        <a href="../login.html" class="btn btn-primary">Login</a>
+        <a href="../login/" class="btn btn-primary">Login</a>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
