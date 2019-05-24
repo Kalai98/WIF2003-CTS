@@ -224,8 +224,10 @@ function showAllAns() {
 function checkAnswered(id) {
     if (localStorage.getItem(id) == '' || localStorage.getItem(id) == null) {
         document.getElementById(id + 'b').innerHTML = 'Not Answered';
+        document.getElementById(id + 'b').parentElement.classList.add('table-danger');
     } else {
         document.getElementById(id + 'b').innerHTML = 'Answered';
+        document.getElementById(id + 'b').parentElement.classList.remove('table-danger');
     }
 }
 
