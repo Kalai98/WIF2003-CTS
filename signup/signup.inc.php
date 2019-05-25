@@ -19,8 +19,8 @@ if (isset($_POST['submit'])) {
   
 
   $sqlMatric = "SELECT Matric_No FROM users WHERE Matric_No = '$matricNo'";
-  $sqlUsername = "SELECT Username FROM users WHERE Matric_No = '$username'";
-  $sqlEmail = "SELECT Email FROM users WHERE Matric_No = '$email'";
+  $sqlUsername = "SELECT Username FROM users WHERE Username = '$username'";
+  $sqlEmail = "SELECT Email FROM users WHERE Email = '$email'";
 
   // Matric number taken
   if(mysqli_num_rows(mysqli_query($conn, $sqlMatric))){
@@ -29,19 +29,19 @@ if (isset($_POST['submit'])) {
   }
   
   // Username taken
-  else if(mysqli_num_rows(mysqli_query($conn, $sqlUsername))){
+  if(mysqli_num_rows(mysqli_query($conn, $sqlUsername))){
     header('Location: '.ROOT_URL.'signup/index.php?error=usernameTaken');
     exit();
   }
 
   // Email taken
-  else if(mysqli_num_rows(mysqli_query($conn, $sqlEmail))){
+  if(mysqli_num_rows(mysqli_query($conn, $sqlEmail))){
     header('Location: '.ROOT_URL.'signup/index.php?error=emailTaken');
     exit();
   }
 
   //password not match
-  else if ($password !== $confirmPassword) {
+  if ($password !== $confirmPassword) {
     header('Location: '.ROOT_URL.'signup/index.php?error=passwordnotmatch');
     exit();
   }
