@@ -26,3 +26,7 @@ input:focus{
 #timer{
     padding: 1em;
 }
+
+.timerContainer{
+    width: 20%;
+}

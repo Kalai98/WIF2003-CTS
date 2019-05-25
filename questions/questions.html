@@ -11,25 +11,31 @@
   <div class="container">
 
     <form class="" method="POST" id="regForm" action="marks.php">
-      
-      <div class="jumbotron mt-3 shadow-lg bg-light">
-        <nav id="navbar" class="center-button">
-            <ul class="pagination pagination-lg justify-content-center text-dark">
-              <li class="page-item" onclick="goTo(0)"><a class="page-link">1</a></li>
-              <li class="page-item" onclick="goTo(1)"><a class="page-link">2</a></li>
-              <li class="page-item" onclick="goTo(2)"><a class="page-link">3</a></li>
-              <li class="page-item" onclick="goTo(3)"><a class="page-link">4</a></li>
-              <li class="page-item" onclick="goTo(4)"><a class="page-link">5</a></li>
-              <li class="page-item" onclick="goTo(5)"><a class="page-link">6</a></li>
-              <li class="page-item" onclick="goTo(6)"><a class="page-link">7</a></li>
-              <li class="page-item" onclick="goTo(7)"><a class="page-link">8</a></li>
-              <li class="page-item" onclick="goTo(8)"><a class="page-link">9</a></li>
-              <li class="page-item" onclick="goTo(9)"><a class="page-link">10</a></li>
-            </ul>
-          </nav>
 
-          <p class="lead text-center" id="timer">Time Left: <span id="demo">60m 00s</span></p>
-      <!-- Question 1 -->
+
+      <div class="timerContainer shadow text-center mt-4 mb-1 bg-light">
+        <p id="timer" class="h6">Time Left: <br><span id="demo" class="h3">60m 00s</span></p>
+      </div>
+
+      <div class="mt-4 mb-1" style="float: right;">
+        <nav id="navbar" class="center-button ">
+          <ul class="pagination text-dark">
+            <li class="page-item" onclick="goTo(0)"><a id="pa1" class="page-link">1</a></li>
+            <li class="page-item" onclick="goTo(1)"><a class="page-link">2</a></li>
+            <li class="page-item" onclick="goTo(2)"><a class="page-link">3</a></li>
+            <li class="page-item" onclick="goTo(3)"><a class="page-link">4</a></li>
+            <li class="page-item" onclick="goTo(4)"><a class="page-link">5</a></li>
+            <li class="page-item" onclick="goTo(5)"><a class="page-link">6</a></li>
+            <li class="page-item" onclick="goTo(6)"><a class="page-link">7</a></li>
+            <li class="page-item" onclick="goTo(7)"><a class="page-link">8</a></li>
+            <li class="page-item" onclick="goTo(8)"><a class="page-link">9</a></li>
+            <li class="page-item" onclick="goTo(9)"><a class="page-link">10</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="jumbotron mt-3 shadow-lg bg-light">
+        <!-- Question 1 -->
         <div class="tab">
           <p class="display-4">Question 1</p>
           <div class="container">
@@ -53,12 +59,12 @@
             </div>
           </div>
         </div>
-      
 
-      <!-- Question 2 -->
-    
+
+        <!-- Question 2 -->
+
         <div class="tab">
-            <h1 class="display-4">Question 2</h1>
+          <h1 class="display-4">Question 2</h1>
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/shakes.jpg" class="img-thumbnail " alt="shake hand" width="304" height="236">
@@ -86,17 +92,17 @@
           </div>
         </div>
 
-      <!-- Question 3 -->
-      
-      <div class="tab">
-        <h1 class="display-4">Question 3</h1>
+        <!-- Question 3 -->
+
+        <div class="tab">
+          <h1 class="display-4">Question 3</h1>
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/birds.jpg" class="img-thumbnail " alt="birds" width="304" height="236">
               <img src="images_q/turtles.jpg" class="img-thumbnail " alt="turtles" width="338" height="236">
             </div>
             <div class="container mt-3 bg-light shadow p-4"">
-              <p class="lead pt-3">There are altogether 100 birds and turtles. The total number of legs is 276.
+              <p class=" lead pt-3">There are altogether 100 birds and turtles. The total number of legs is 276.
               </p>
               <p class="lead "><i>Question</i>: <strong>How many birds and turtles are there,
                   respectively?</strong>
@@ -118,9 +124,9 @@
           </div>
         </div>
 
-      <!-- Question 4 -->
-      <div class="tab">
-        <h1 class="display-4">Question 4</h1>
+        <!-- Question 4 -->
+        <div class="tab">
+          <h1 class="display-4">Question 4</h1>
           <div class="container">
             <div class="container mt-3 bg-light shadow p-4">
               <p class="lead">Move the following numbers to make them equal, mathematically. Write your answer
@@ -140,9 +146,9 @@
           </div>
         </div>
 
-      <!-- Question 5 -->
-      <div class="tab">
-        <h1 class="display-4">Question 5</h1>
+        <!-- Question 5 -->
+        <div class="tab">
+          <h1 class="display-4">Question 5</h1>
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/distinction.jpg" class="img-thumbnail " alt="distinction" width="304" height="236">
@@ -170,15 +176,15 @@
           </div>
         </div>
 
-      <!-- Question 6 -->
-      <div class="tab">
-        <h1 class="display-4">Question 6</h1>
+        <!-- Question 6 -->
+        <div class="tab">
+          <h1 class="display-4">Question 6</h1>
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/photo.jpg" class="img-thumbnail " alt="photo" width="340" height="236">
               <img src="images_q/box.jpg" class="img-thumbnail " alt="box" width="338" height="236">
             </div>
-            <div class="container mt-3 bg-light shadow p-4" >
+            <div class="container mt-3 bg-light shadow p-4">
               <p class="lead pt-3">There are three (3) boxes: a gold box, a silver box, and a red box. On top of
                 each of
                 the boxes,
@@ -200,9 +206,9 @@
           </div>
         </div>
 
-      <!-- Question 7 -->
-      <div class="tab">
-        <h1 class="display-4">Question 7</h1>
+        <!-- Question 7 -->
+        <div class="tab">
+          <h1 class="display-4">Question 7</h1>
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/woodenstick.jpg" class="img-thumbnail " alt="burning wooden stick" width="304"
@@ -290,11 +296,11 @@
             </div>
           </div>
 
-      </div>
+        </div>
 
-      <!-- Question 8  -->
-      <div class="tab">
-        <h1 class="display-4">Question 8</h1>
+        <!-- Question 8  -->
+        <div class="tab">
+          <h1 class="display-4">Question 8</h1>
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/dancer.jpg" class="img-thumbnail " alt="photo" width="200" height="236">
@@ -302,7 +308,7 @@
               <img src="images_q/novelist.jpg" class="img-thumbnail " alt="box" width="200" height="236">
               <img src="images_q/tvhost.jpg" class="img-thumbnail " alt="box" width="200" height="236">
             </div>
-            <div class="container mt-3 bg-light shadow p-4" >
+            <div class="container mt-3 bg-light shadow p-4">
               <p class="lead pt-3">There are four people: A, B, C, and D. They are predicting the future career
                 for each
                 other: dancer,
@@ -371,9 +377,9 @@
           </div>
         </div>
 
-      <!-- Question 9  -->
-      <div class="tab">
-        <h1 class="display-4">Question 9</h1>
+        <!-- Question 9  -->
+        <div class="tab">
+          <h1 class="display-4">Question 9</h1>
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/fatthin.jpg" class="img-thumbnail " alt="fat and thin brothers" width="304"
@@ -423,9 +429,9 @@
           </div>
         </div>
 
-      <!-- Question 10 -->
-      <div class="tab">
-        <h1 class="display-4">Question 10</h1>
+        <!-- Question 10 -->
+        <div class="tab">
+          <h1 class="display-4">Question 10</h1>
           <div class="container">
             <div class="thumbnails text-center">
               <img src="images_q/guard.jpg" class="img-thumbnail " alt="lion" width="304" height="236">
@@ -451,94 +457,94 @@
         </div>
 
 
-      <div id="" class="tab">
-        <h1 class="">Review Question</h1>
-        <table class=" shadow table table-light table-hover table-borderless text-center">
-          <thead>
-            <tr class="d-flex bg-dark text-white">
-              <th class="col-1" scope="col">No</th>
-              <th class="col-8" scope="col">Answer</th>
-              <th class="col-3" scope="col">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="d-flex" onclick="goTo(0)">
-              <th class="col-1" scope="row">1</th>
-              <td class="col-8 text-left" id="a1a"></td>
-              <td class="col-3" id="a1b"></td>
-            </tr>
-            <tr class="d-flex table-danger" onclick="goTo(1)">
-              <th class="col-1" scope="row">2</th>
-              <td class="col-8 text-left" id="a2a"></td>
-              <td class="col-3" id="a2b"></td>
-            </tr>
-            <tr class="d-flex" onclick="goTo(2)">
-              <th class="col-1" scope="row">3</th>
-              <td class="col-8 text-left">
-                <p id="a31a"></p>
-                <p id="a32a"></p>
-              </td>
-              <td class="col-3" id="a3b"></td>
-            </tr>
-            <tr class="d-flex" onclick="goTo(3)">
-              <th class="col-1" scope="row">4</th>
-              <td class="col-8 text-left" id="a4a"></td>
-              <td class="col-3" id="a4b"></td>
-            </tr>
-            <tr class="d-flex" onclick="goTo(4)">
-              <th class="col-1" scope="row">5</th>
-              <td class="col-8 text-left" id="a5a"></td>
-              <td class="col-3" id="a5b"></td>
-            </tr>
-            <tr class="d-flex" onclick="goTo(5)">
-              <th class="col-1" scope="row">6</th>
-              <td class="col-8 text-left" id="a6a"></td>
-              <td class="col-3" id="a6b"></td>
-            </tr>
-            <tr class="d-flex" onclick="goTo(6)">
-              <th class="col-1" scope="row">7</th>
-              <td class="col-8 text-left" id="a7a"></td>
-              <td class="col-3" id="a7b"></td>
-            </tr>
-            <tr class="d-flex" onclick="goTo(7)">
-              <th class="col-1" scope="row">8</th>
-              <td class="col-8 text-left">
-                <p id="a81a"></p>
-                <p id="a82a"></p>
-                <p id="a83a"></p>
-                <p id="a84a"></p>
-                <p id="a85a"></p>
-              </td>
-              <td class="col-3" id="a8b"></td>
-            </tr>
-            <tr class="d-flex" onclick="goTo(8)">
-              <th class="col-1" scope="row">9</th>
-              <td class="col-8 text-left">
-                <p id="a91a"></p>
-                <p id="a92a"></p>
-              </td>
-              <td class="col-3" id="a9b"></td>
-            </tr>
-            <tr class="d-flex" onclick="goTo(9)">
-              <th class="col-1" scope="row">10</th>
-              <td class="col-8 text-left" id="a10a"></td>
-              <td class="col-3" id="a10b"></td>
-            </tr>
+        <div id="" class="tab">
+          <h1 class="">Review Question</h1>
+          <table class=" shadow table table-light table-hover table-borderless text-center">
+            <thead>
+              <tr class="d-flex bg-dark text-white">
+                <th class="col-1" scope="col">No</th>
+                <th class="col-8" scope="col">Answer</th>
+                <th class="col-3" scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="d-flex" onclick="goTo(0)">
+                <th class="col-1" scope="row">1</th>
+                <td class="col-8 text-left" id="a1a"></td>
+                <td class="col-3" id="a1b"></td>
+              </tr>
+              <tr class="d-flex table-danger" onclick="goTo(1)">
+                <th class="col-1" scope="row">2</th>
+                <td class="col-8 text-left" id="a2a"></td>
+                <td class="col-3" id="a2b"></td>
+              </tr>
+              <tr class="d-flex" onclick="goTo(2)">
+                <th class="col-1" scope="row">3</th>
+                <td class="col-8 text-left">
+                  <p id="a31a"></p>
+                  <p id="a32a"></p>
+                </td>
+                <td class="col-3" id="a3b"></td>
+              </tr>
+              <tr class="d-flex" onclick="goTo(3)">
+                <th class="col-1" scope="row">4</th>
+                <td class="col-8 text-left" id="a4a"></td>
+                <td class="col-3" id="a4b"></td>
+              </tr>
+              <tr class="d-flex" onclick="goTo(4)">
+                <th class="col-1" scope="row">5</th>
+                <td class="col-8 text-left" id="a5a"></td>
+                <td class="col-3" id="a5b"></td>
+              </tr>
+              <tr class="d-flex" onclick="goTo(5)">
+                <th class="col-1" scope="row">6</th>
+                <td class="col-8 text-left" id="a6a"></td>
+                <td class="col-3" id="a6b"></td>
+              </tr>
+              <tr class="d-flex" onclick="goTo(6)">
+                <th class="col-1" scope="row">7</th>
+                <td class="col-8 text-left" id="a7a"></td>
+                <td class="col-3" id="a7b"></td>
+              </tr>
+              <tr class="d-flex" onclick="goTo(7)">
+                <th class="col-1" scope="row">8</th>
+                <td class="col-8 text-left">
+                  <p id="a81a"></p>
+                  <p id="a82a"></p>
+                  <p id="a83a"></p>
+                  <p id="a84a"></p>
+                  <p id="a85a"></p>
+                </td>
+                <td class="col-3" id="a8b"></td>
+              </tr>
+              <tr class="d-flex" onclick="goTo(8)">
+                <th class="col-1" scope="row">9</th>
+                <td class="col-8 text-left">
+                  <p id="a91a"></p>
+                  <p id="a92a"></p>
+                </td>
+                <td class="col-3" id="a9b"></td>
+              </tr>
+              <tr class="d-flex" onclick="goTo(9)">
+                <th class="col-1" scope="row">10</th>
+                <td class="col-8 text-left" id="a10a"></td>
+                <td class="col-3" id="a10b"></td>
+              </tr>
 
-          </tbody>
-        </table>
-      </div>
+            </tbody>
+          </table>
+        </div>
 
-      <input name="duration" id="dur" type="hidden">
-      <input name="startTime" id="startTime" type="hidden">
-      <input name="stopTime" id="stopTime" type="hidden">
+        <input name="duration" id="dur" type="hidden">
+        <input name="startTime" id="startTime" type="hidden">
+        <input name="stopTime" id="stopTime" type="hidden">
     </form>
     <div class="mt-3 mb-3" style="overflow:auto;">
-        <div style="float:right;">
-          <button class="btn btn-secondary" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-          <button class="btn btn-secondary" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-        </div>
+      <div style="float:right;">
+        <button class="btn btn-secondary" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button class="btn btn-secondary" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
       </div>
+    </div>
   </div>
 
   </div>

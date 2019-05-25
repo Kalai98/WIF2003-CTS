@@ -1,24 +1,42 @@
-<?php 
+<?php
 
-echo $a1 = $_POST['a1'];
-echo $a2 = $_POST['a2'];
-echo $a31 = $_POST['a31'];
-echo $a32 = $_POST['a32'];
-echo $a4 = $_POST['a4'];
-echo $a5 = $_POST['a5'];
-echo $a6 = $_POST['a6'];
-echo $a81 = $_POST['a81'];
-echo $a82 = $_POST['a82'];
-echo $a83 = $_POST['a83'];
-echo $a84 = $_POST['a84'];
-echo $a85 = $_POST['a85'];
-echo $a91 = $_POST['a91'];
-echo $a92 = $_POST['a92'];
-echo $a10 = $_POST['a10'];
+require('../config/db.php');
 
-echo $duration = $_POST['duration'];
-echo $startTime = $_POST['startTime'];
-echo $stopTime = $_POST['stopTime'];
+if(isset($_POST['submit'])){
+
+    $a1 = mysqli_real_escape_string($conn, $_POST['a1']);
+    $a2 = mysqli_real_escape_string($conn, $_POST['a2']);
+    $a31 = mysqli_real_escape_string($conn, $_POST['a31']);
+    $a32 = mysqli_real_escape_string($conn,$_POST['a32']);
+    $a4 = mysqli_real_escape_string($conn,$_POST['a4']);
+    $a5 = mysqli_real_escape_string($conn,$_POST['a5']);
+    $a6 = mysqli_real_escape_string($conn,$_POST['a6']);
+    $a81 = mysqli_real_escape_string($conn,$_POST['a81']);
+    $a82 = mysqli_real_escape_string($conn,$_POST['a82']);
+    $a83 = mysqli_real_escape_string($conn,$_POST['a83']);
+    $a84 = mysqli_real_escape_string($conn,$_POST['a84']);
+    $a85 = mysqli_real_escape_string($conn,$_POST['a85']);
+    $a91 = mysqli_real_escape_string($conn,$_POST['a91']);
+    $a92 = mysqli_real_escape_string($conn,$_POST['a92']);
+    $a10 = mysqli_real_escape_string($conn,$_POST['a10']);
+
+    $duration = mysqli_real_escape_string($conn,$_POST['duration']);
+    $startTime = mysqli_real_escape_string($conn,$_POST['startTime']);
+    $stopTime = mysqli_real_escape_string($conn,$_POST['stopTime']);
+
+    $grade;
+    $matric_no;
+    $percentage;
+
+    $query = `INSERT INTO results(Matric_No, Duration, Start_Time, Stop_Time, Grade) 
+              VALUES('$matric_no', '$duration', '$startTime', '$stopTime', '$grade')`;
+
+    // if(mysqli_query($conn, $query)){
+    //     header('Location: '.ROOT_URL.'marks.php?question=success');
+    // }else{
+    //     echo 'ERROR'. mysqli_error($conn);
+    // }
+}
 
 
 ?>
@@ -77,7 +95,7 @@ echo $stopTime = $_POST['stopTime'];
                         </tr>
                         <tr>
                             <th>Grade</th>
-                            <td>4.00 out of 5.00 (80%)</td>
+                            <td><?php echo $grade ?> out of 8 (<?php echo $percentage ?>)</td>
                         </tr>
                     </tbody>
                 </table>

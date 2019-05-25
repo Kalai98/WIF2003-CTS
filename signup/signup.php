@@ -1,8 +1,10 @@
 <?php
-require('../config/config.php');
+require('../config/db.php');
 
 if (isset($_POST['submit'])){
     // session_start();
+    $name = mysqli_real_escape_string($conn,$_POST['name']); 
+    $username = mysqli_real_escape_string($conn,$_POST['username']); 
     $matricNo = mysqli_real_escape_string($conn,$_POST['matricNo']); 
     $yearStudy =mysqli_real_escape_string($conn,$_POST['yearStudy']);
     $gender = mysqli_real_escape_string($conn,$_POST['gender']);

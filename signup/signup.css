@@ -1,7 +1,6 @@
 /* Body Background */
 body {
     background-image: url(bg.jpg);
-    background-repeat: no-repeat;
     background-size: 100%;
   }
 
@@ -26,6 +25,7 @@ body {
     border-radius: 5px;
     outline: 0px;
   }
+
   #ph{
     outline: 0px;
     width: 50px;

@@ -22,7 +22,7 @@ function showTab(n) {
         document.getElementById('navbar').style.display = "inline";
         document.getElementById("nextBtn").innerHTML = "Next";
     }
-
+    
 }
 
 function goTo(page) {
