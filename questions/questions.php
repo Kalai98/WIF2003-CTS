@@ -1,3 +1,9 @@
+<?php 
+  session_start();
+  require('../config/db.php');
+  $name = $_SESSION['Name'];
+
+?>
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +16,7 @@
 
   <div class="container">
 
-    <form class="" method="POST" id="regForm" action="marks.php">
-
+    <form method="POST" id="regForm" action="marks.php">
 
       <div class="timerContainer shadow text-center mt-4 mb-1 bg-light">
         <p id="timer" class="h6">Time Left: <br><span id="demo" class="h3">60m 00s</span></p>
@@ -538,6 +543,11 @@
         <input name="duration" id="dur" type="hidden">
         <input name="startTime" id="startTime" type="hidden">
         <input name="stopTime" id="stopTime" type="hidden">
+
+        <input name="name" id="name" type="hidden" value="<?php echo $name; ?>">
+        <input name="matricNo" id="matricNo" type="hidden" value="<?php echo $matricNo; ?>">
+
+
     </form>
     <div class="mt-3 mb-3" style="overflow:auto;">
       <div style="float:right;">

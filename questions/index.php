@@ -1,3 +1,18 @@
+<?php 
+
+    session_start();
+    require('../config/db.php');
+
+    if(isset($_SESSION['login'])){
+        $name = $_SESSION['Name'];
+        $matricNo = $_SESSION['MatricNo'];
+    }else{
+        header('Location: '.ROOT_URL.'login/index.php?error=notLoggedIn');
+        exit();
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +45,7 @@
                 </ul>
             </div>
         </nav>
-        <h1>Welcome to CTS Test!</h1>
+        <h1>Welcome <?php echo $name ?>!</h1>
         <div class="container">
             <header class="p-2">
                 <p class="lead">A Critical Thinking test, also known as a critical reasoning test,
@@ -44,7 +59,7 @@
 
             <section class="man text-center p-5">
                 <h2 class="mt-5">Are you ready?</h2>
-                <a href="questions.html" class="mb-5 btn btn-dark">Start</a>
+                <a href="./questions.php" name="start" class="mb-5 btn btn-dark">Start</a>
             </section>
 
             <section class="p-2">

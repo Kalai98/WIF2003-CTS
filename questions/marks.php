@@ -1,8 +1,9 @@
 <?php
 
+session_start();
 require('../config/db.php');
 
-if(isset($_POST['submit'])){
+if(isset($_POST['submit'])){ 
 
     $a1 = mysqli_real_escape_string($conn, $_POST['a1']);
     $a2 = mysqli_real_escape_string($conn, $_POST['a2']);
@@ -23,18 +24,23 @@ if(isset($_POST['submit'])){
     $duration = mysqli_real_escape_string($conn,$_POST['duration']);
     $startTime = mysqli_real_escape_string($conn,$_POST['startTime']);
     $stopTime = mysqli_real_escape_string($conn,$_POST['stopTime']);
+    
 
-    $grade;
-    $matric_no;
+    $grade = '80%';
+    $matric_no = mysqli_real_escape_string($conn,$_POST['matricNo']);
+    $name = mysqli_real_escape_string($conn,$_POST['name']);
     $percentage;
 
     $query = "INSERT INTO results(Matric_No, Duration, Start_Time, Stop_Time, Grade) VALUES('$matric_no', '$duration', '$startTime', '$stopTime', '$grade')";
 
-    // if(mysqli_query($conn, $query)){
-    //     header('Location: '.ROOT_URL.'marks.php?question=success');
-    // }else{
-    //     echo 'ERROR'. mysqli_error($conn);
-    // }
+    if(mysqli_query($conn, $query)){
+        header('Location: '.ROOT_URL.'marks.php?question=success');
+    }else{
+        echo 'ERROR'. mysqli_error($conn);
+    }
+}else{
+    header('Location: '.ROOT_URL.'login/index.php?error=wtf');
+    exit();
 }
 
 
@@ -51,7 +57,7 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Thank you for your time!</title>
+    <title>Thank you, <?php echo $name; ?>!</title>
 
     <style>
         body {
@@ -70,10 +76,10 @@ if(isset($_POST['submit'])){
 
 <body>
     <div class="container mt-5 text-center">
-        <h1 class="h1 text-white">Thank you for your time</h1>
+        <h1 class="h1 text-white">Thank you for your time, <?php echo $name; ?></h1>
         <div class="card bg-dark text-white mt-5">
             <div class="card-body">
-                <p style="font-size : 40px"> Summary of your attempts : <strong> 80 %</strong></p>
+                <p style="font-size : 40px"> Summary of your attempts : <strong><?php echo $percentage ?>%</strong></p>
                 <table class="table table-dark table-striped table-bordered">
                     <tbody>
                         <tr>
@@ -94,7 +100,7 @@ if(isset($_POST['submit'])){
                         </tr>
                         <tr>
                             <th>Grade</th>
-                            <td><?php echo $grade ?> out of 8 (<?php echo $percentage ?>)</td>
+                            <td><?php echo $grade ?> out of 8 (<?php echo $percentage ?>)%</td>
                         </tr>
                     </tbody>
                 </table>

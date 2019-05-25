@@ -16,6 +16,7 @@ function showTab(n) {
     } else if (n == (x.length - 1)) {
         document.getElementById('navbar').style.display = "none";
         document.getElementById("nextBtn").innerHTML = "Submit";
+        // document.getElementById("nextBtn").name = "submit";
         document.getElementById("prevBtn").style.display = "none";
         showAllAns();
     } else {
@@ -51,7 +52,7 @@ function checkIfLastPage(current) {
         // ... the form gets submitted:
         getEndTime();
         document.getElementById("regForm").submit();
-        localStorage.clear();
+        // localStorage.clear();
     }
 }
 
@@ -59,7 +60,7 @@ function checkIfLastPage(current) {
 //-------------------------------------------------Timer------------------------------------------------//
 // Set the date we're counting down to
 var countDownDate = new Date().getTime() + (3600 * 1000);
-localStorage.clear();
+// localStorage.clear();
 localStorage.setItem('Start Time', getCurrentTime());
 
 // Update the count down every 1 second

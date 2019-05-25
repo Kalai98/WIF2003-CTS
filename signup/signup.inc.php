@@ -3,7 +3,6 @@ require('../config/db.php');
 
 if (isset($_POST['submit'])) {
 
-  // session_start();
   $matricNo = mysqli_real_escape_string($conn, $_POST['matricNo']);
   $username = mysqli_real_escape_string($conn, $_POST['username']);
   $name = mysqli_real_escape_string($conn, $_POST['name']);

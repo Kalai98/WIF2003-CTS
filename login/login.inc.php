@@ -1,8 +1,8 @@
 <?php
 
 
+require('../config/db.php');
 if(isset($_POST['submit'])){
-    require('../config/db.php');
 
     $login = mysqli_real_escape_string($conn, $_POST['login']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
     
     // Input recieved
     else{
-        $query = "SELECT * FROM users WHERE Username = '$login' OR Email = '$login'";
+        $query = "SELECT * FROM users WHERE Username = '$login' OR Email = '$login' OR Matric_No = '$login'";
 
         $result = mysqli_query($conn, $query);
 
@@ -29,8 +29,9 @@ if(isset($_POST['submit'])){
                 $_SESSION['MatricNo'] = $row['Matric_No'];
                 $_SESSION['Name'] = $row['Name'];
                 $_SESSION['Email'] = $row['Email'];
+                $_SESSION['login'] = 'success';
 
-                header('Location: '.ROOT_URL.'../cts-project/questions/index.php?login=success');
+                header('Location: '.ROOT_URL.'../cts-project/questions/index.php?');
                 exit();
             }
             
@@ -48,6 +49,6 @@ if(isset($_POST['submit'])){
 
 }
 else{
-    header('Location: '.ROOT_URL.'login/');
+    header('Location: '.ROOT_URL.'login/index.php?error=notLoggedIn');
     exit();
 }
