@@ -6,10 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-    <link href="signup.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="signup.css" rel="stylesheet">
 
     <title>Sign In</title>
 </head>
@@ -18,9 +17,30 @@
     <div class="simple-form">
 
 
-        <form action="signup.php" method="POST" id="registration">
+        <form action="signup.inc.php" method="POST" id="registration">
             <h1>Sign Up</h1>
+            <?php 
+                
+                if(isset($_GET['error'])){
+
+                    $error = $_GET['error'];
+
+                    if($error == 'matricNoTaken'){
+                        echo '<div class="alert" role="alert">Matric No Taken</div>';
+                    }
+                    else if($error == 'usernameTaken'){
+                        echo '<div class="alert" role="alert">Username Taken</div>';
+                    }
+                    else if($error == 'emailTaken'){
+                        echo '<div class="alert" role="alert">Email Taken</div>';
+                    }
+                    else if($error == 'passwordnotmatch'){
+                        echo '<div class="alert" role="alert">Password not match</div>';
+                    }
+                }
+
             
+            ?>
             <input name="name" type="text" class="form-control" id="button" placeholder="Name"><br><br>
             <input name="username" type="text" class="form-control" id="button" placeholder="Username"><br><br>
             <input type="text" class="form-control" name="matricNo" id="button" placeholder="Matric No."><br><br>

@@ -28,8 +28,7 @@ if(isset($_POST['submit'])){
     $matric_no;
     $percentage;
 
-    $query = `INSERT INTO results(Matric_No, Duration, Start_Time, Stop_Time, Grade) 
-              VALUES('$matric_no', '$duration', '$startTime', '$stopTime', '$grade')`;
+    $query = "INSERT INTO results(Matric_No, Duration, Start_Time, Stop_Time, Grade) VALUES('$matric_no', '$duration', '$startTime', '$stopTime', '$grade')";
 
     // if(mysqli_query($conn, $query)){
     //     header('Location: '.ROOT_URL.'marks.php?question=success');
