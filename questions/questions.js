@@ -20,9 +20,6 @@ function showTab(n) {
         document.getElementById("submitBtn").style.display = "none";
     } else if (n == (x.length - 1)) {
         document.getElementById('navbar').style.display = "none";
-        // document.getElementById("nextBtn").innerHTML = "Submit";
-        // document.getElementById("nextBtn").name = "submit";
-        // document.getElementById("nextBtn").type = "submit";
         document.getElementById("submitBtn").style.display = "inline";
         document.getElementById("nextBtn").style.display = "none";
         document.getElementById("prevBtn").style.display = "none";
