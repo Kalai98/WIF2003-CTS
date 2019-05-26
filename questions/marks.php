@@ -1,48 +1,22 @@
 <?php
 
-session_start();
 require('../config/db.php');
 
-if(isset($_POST['submit'])){ 
-
-    $a1 = mysqli_real_escape_string($conn, $_POST['a1']);
-    $a2 = mysqli_real_escape_string($conn, $_POST['a2']);
-    $a31 = mysqli_real_escape_string($conn, $_POST['a31']);
-    $a32 = mysqli_real_escape_string($conn,$_POST['a32']);
-    $a4 = mysqli_real_escape_string($conn,$_POST['a4']);
-    $a5 = mysqli_real_escape_string($conn,$_POST['a5']);
-    $a6 = mysqli_real_escape_string($conn,$_POST['a6']);
-    $a81 = mysqli_real_escape_string($conn,$_POST['a81']);
-    $a82 = mysqli_real_escape_string($conn,$_POST['a82']);
-    $a83 = mysqli_real_escape_string($conn,$_POST['a83']);
-    $a84 = mysqli_real_escape_string($conn,$_POST['a84']);
-    $a85 = mysqli_real_escape_string($conn,$_POST['a85']);
-    $a91 = mysqli_real_escape_string($conn,$_POST['a91']);
-    $a92 = mysqli_real_escape_string($conn,$_POST['a92']);
-    $a10 = mysqli_real_escape_string($conn,$_POST['a10']);
-
-    $duration = mysqli_real_escape_string($conn,$_POST['duration']);
-    $startTime = mysqli_real_escape_string($conn,$_POST['startTime']);
-    $stopTime = mysqli_real_escape_string($conn,$_POST['stopTime']);
+if($_GET['completed'] == 'true'){
+    session_start();
     
-
-    $grade = '80%';
-    $matric_no = mysqli_real_escape_string($conn,$_POST['matricNo']);
-    $name = mysqli_real_escape_string($conn,$_POST['name']);
-    $percentage;
-
-    $query = "INSERT INTO results(Matric_No, Duration, Start_Time, Stop_Time, Grade) VALUES('$matric_no', '$duration', '$startTime', '$stopTime', '$grade')";
-
-    if(mysqli_query($conn, $query)){
-        header('Location: '.ROOT_URL.'marks.php?question=success');
-    }else{
-        echo 'ERROR'. mysqli_error($conn);
-    }
-}else{
-    header('Location: '.ROOT_URL.'login/index.php?error=wtf');
-    exit();
+    $name = $_SESSION['Name'];
+    $percentage = $_SESSION['per'];
+    $duration = $_SESSION['dur'];
+    $startTime = $_SESSION['start'];
+    $stopTime = $_SESSION['end'];
+    $grade = $_SESSION['grade'];
 }
 
+else{
+    header('Location: '.ROOT_URL.'questions/index.php?error=noAttempt');
+    exit();
+}
 
 ?>
 <!doctype html>
@@ -100,14 +74,14 @@ if(isset($_POST['submit'])){
                         </tr>
                         <tr>
                             <th>Grade</th>
-                            <td><?php echo $grade ?> out of 8 (<?php echo $percentage ?>)%</td>
+                            <td><?php echo $grade ?> out of 8 (<?php echo $percentage ?>%)</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <a href="index.html" class="btn btn-primary btn-lg mt-5">Done</a>
+        <a href="index.php" class="btn btn-primary btn-lg mt-5">Done</a>
     </div>
 
     <!-- Optional JavaScript -->

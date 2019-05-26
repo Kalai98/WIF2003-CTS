@@ -7,21 +7,32 @@ function showTab(n) {
     x[n].style.display = "block";
     //... and fix the Previous/Next buttons:
     if (n == 0) {
+        document.getElementById("submitBtn").style.display = "none";
         document.getElementById("prevBtn").style.display = "none";
+        document.getElementById("nextBtn").style.display = "inline";
     } else {
+        document.getElementById("nextBtn").style.display = "inline";
         document.getElementById("prevBtn").style.display = "inline";
+        document.getElementById("submitBtn").style.display = "none";
     }
     if (n == (x.length - 2)) {
-        document.getElementById("nextBtn").innerHTML = "Confirm";
+        document.getElementById("nextBtn").innerHTML = "Submit";
+        document.getElementById("submitBtn").style.display = "none";
     } else if (n == (x.length - 1)) {
         document.getElementById('navbar').style.display = "none";
-        document.getElementById("nextBtn").innerHTML = "Submit";
+        // document.getElementById("nextBtn").innerHTML = "Submit";
         // document.getElementById("nextBtn").name = "submit";
+        // document.getElementById("nextBtn").type = "submit";
+        document.getElementById("submitBtn").style.display = "inline";
+        document.getElementById("nextBtn").style.display = "none";
         document.getElementById("prevBtn").style.display = "none";
         showAllAns();
     } else {
+        document.getElementById("nextBtn").style.display = "inline";
+        document.getElementById("submitBtn").style.display = "none";
         document.getElementById('navbar').style.display = "inline";
         document.getElementById("nextBtn").innerHTML = "Next";
+        document.getElementById("nextBtn").type = "button";
     }
     
 }
@@ -52,7 +63,8 @@ function checkIfLastPage(current) {
         // ... the form gets submitted:
         getEndTime();
         document.getElementById("regForm").submit();
-        // localStorage.clear();
+        alert('Submitted');
+        localStorage.clear();
     }
 }
 
@@ -60,7 +72,7 @@ function checkIfLastPage(current) {
 //-------------------------------------------------Timer------------------------------------------------//
 // Set the date we're counting down to
 var countDownDate = new Date().getTime() + (3600 * 1000);
-// localStorage.clear();
+localStorage.clear();
 localStorage.setItem('Start Time', getCurrentTime());
 
 // Update the count down every 1 second
@@ -105,7 +117,7 @@ function getEndTime() {
     var stopHTML = document.getElementById('stopTime');
     stopHTML.value = localStorage.getItem('Stop Time');
 
-    // localStorage.clear();
+    localStorage.clear();
 }
 
 function getCurrentTime() {
@@ -182,12 +194,15 @@ function isRadioAnswered() {
 function showAllAns() {
 
     for (var i = 1; i < storageLength; i++) {
+        // console.log(i);
         var id = 'a' + i;
-        if (i == 3 || i == 9) {
+        if (i === 3 || i === 9) {
             document.getElementById(id + '1a').innerHTML = localStorage.getItem(id + '1');
             document.getElementById(id + '2a').innerHTML = localStorage.getItem(id + '2');
             checkAnswered(id);
-        } else if (i == 8) {
+            console.log(i + 'complete');
+        }
+        else if (i === 8) {
             document.getElementById(id + '1a').innerHTML = localStorage.getItem(id + '1');
             document.getElementById(id + '2a').innerHTML = localStorage.getItem(id + '2');
             document.getElementById(id + '3a').innerHTML = localStorage.getItem(id + '3');
@@ -212,7 +227,8 @@ function checkAnswered(id) {
             document.getElementById(id + 'b').innerHTML = 'Answered';
             document.getElementById(id + 'b').parentElement.classList.remove('table-danger');
         }
-    } else if (localStorage.getItem(id) == '' || localStorage.getItem(id) == null) {
+    } else if (localStorage.getItem(id) == ' ' || localStorage.getItem(id) == null) {
+        console.log(id);
         document.getElementById(id + 'b').innerHTML = 'Not Answered';
         document.getElementById(id + 'b').parentElement.classList.add('table-danger');
     } else {

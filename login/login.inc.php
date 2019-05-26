@@ -1,6 +1,5 @@
 <?php
 
-
 require('../config/db.php');
 if(isset($_POST['submit'])){
 

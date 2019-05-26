@@ -27,8 +27,7 @@ p {
 
 .main {
     position: relative;
-    /* background-image: url(../images/main.png); */
-    background-size: 100% 100%
+    background-size: 100% 100%;
 }
 
 .bg-4 {

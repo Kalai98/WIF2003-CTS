@@ -1,4 +1,10 @@
 <?php
+require('../config/db.php');
+session_start();
+
+if(!empty($_SESSION['MatricNo'])){
+    header('Location: '.ROOT_URL.'questions/');
+}
 
 
 ?>

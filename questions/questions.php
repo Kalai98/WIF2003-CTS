@@ -1,22 +1,15 @@
-<?php 
-  session_start();
-  require('../config/db.php');
-  $name = $_SESSION['Name'];
-
-?>
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="questions.css">
 
 <body>
 
   <div class="container">
 
-    <form method="POST" id="regForm" action="marks.php">
+    <form method="POST" id="regForm" action="marks.inc.php">
 
       <div class="timerContainer shadow text-center mt-4 mb-1 bg-light">
         <p id="timer" class="h6">Time Left: <br><span id="demo" class="h3">60m 00s</span></p>
@@ -216,87 +209,19 @@
           <h1 class="display-4">Question 7</h1>
           <div class="container">
             <div class="thumbnails text-center">
-              <img src="images_q/woodenstick.jpg" class="img-thumbnail " alt="burning wooden stick" width="304"
-                height="236">
+              <img src="images_q/woodenstick.jpg" class="img-thumbnail " alt="burning wooden stick" width="304" height="236">
             </div>
             <div class="container mt-3 bg-light shadow p-4">
               <p class="lead pt-3">Two thin wooden sticks take one (1) hour to complete burning, respectively.
                 What is the
                 method you
                 will use to measure 15 minutes of burning time?</p>
-              <p class="lead mt-5"><strong>Choose your answer based on the step given: </strong></p>
-              <p class="">You can choose more than 1 answer if the step happens simultaneously.</p>
-              <hr class="my-4">
-              <div class="shadow input-group mb-3">
-                <ol>
-                  <li>Burn 1 tip of one of the stick</li>
-                  <li>Burn both tips of 1 of the stick</li>
-                  <li>Burn center of 1 of the stick</li>
-                  <li>Burn 1 tip of both of sticks </li>
-                  <li>Burn both tips of both of the sticks </li>
-                  <li>Burn both center of the both sticks</li>
-                  <li>Wait until one of the stick is fully burned</li>
-                  <li>Wait until one of the stick is halfly burned</li>
-                  <li>Wait until both of the sticks are halfly burned</li>
-                </ol>
+            </div>
 
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">Step 1</th>
-                      <th scope="col">Step 2</th>
-                      <th scope="col">Step 3</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1<input type="checkbox" name="1"></td>
-                      <td>1<input type="checkbox" name="1"></td>
-                      <td>1<input type="checkbox" name="1"></td>
-                    </tr>
-                    <tr>
-                      <td>2<input type="checkbox" name="1"></td>
-                      <td>2<input type="checkbox" name="1"></td>
-                      <td>2<input type="checkbox" name="1"></td>
-                    </tr>
-                    <tr>
-                      <td>3<input type="checkbox" name="1"></td>
-                      <td>3<input type="checkbox" name="1"></td>
-                      <td>3<input type="checkbox" name="1"></td>
-                    </tr>
-                    <tr>
-                      <td>4<input type="checkbox" name="1"></td>
-                      <td>4<input type="checkbox" name="1"></td>
-                      <td>4<input type="checkbox" name="1"></td>
-                    </tr>
-                    <tr>
-                      <td>5<input type="checkbox" name="1"></td>
-                      <td>5<input type="checkbox" name="1"></td>
-                      <td>5<input type="checkbox" name="1"></td>
-                    </tr>
-                    <tr>
-                      <td>6<input type="checkbox" name="1"></td>
-                      <td>6<input type="checkbox" name="1"></td>
-                      <td>6<input type="checkbox" name="1"></td>
-                    </tr>
-                    <tr>
-                      <td>7<input type="checkbox" name="1"></td>
-                      <td>7<input type="checkbox" name="1"></td>
-                      <td>7<input type="checkbox" name="1"></td>
-                    </tr>
-                    <tr>
-                      <td>8<input type="checkbox" name="1"></td>
-                      <td>8<input type="checkbox" name="1"></td>
-                      <td>8<input type="checkbox" name="1"></td>
-                    </tr>
-                    <tr>
-                      <td>9<input type="checkbox" name="1"></td>
-                      <td>9<input type="checkbox" name="1"></td>
-                      <td>9<input type="checkbox" name="1"></td>
-                    </tr>
-
-                  </tbody>
-                </table>
+            <div class="input-group mt-5 mb-5 shadow">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile02">
+                <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Draw and upload your answer</label>
               </div>
             </div>
           </div>
@@ -364,8 +289,7 @@
             <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <div class="input-group-text">
-                  <input class="a85" name="a85" type="radio" onclick="radioToLocalStorage('a85')"
-                    value="D will marry Mr. P">
+                  <input class="a85" name="a85" type="radio" onclick="radioToLocalStorage('a85')" value="D will marry Mr. P">
                 </div>
               </div>
               <input type="text" class="form-control" readonly placeholder="D will marry Mr. P">
@@ -373,8 +297,7 @@
             <div class="shadow input-group mb-3">
               <div class="input-group-prepend">
                 <div class="input-group-text">
-                  <input class="a85" name="a85" type="radio" onclick="radioToLocalStorage('a85')"
-                    value="D will NOT marry Mr. P">
+                  <input class="a85" name="a85" type="radio" onclick="radioToLocalStorage('a85')" value="D will NOT marry Mr. P">
                 </div>
               </div>
               <input type="text" class="form-control" readonly placeholder="D will NOT marry Mr. P">
@@ -387,8 +310,7 @@
           <h1 class="display-4">Question 9</h1>
           <div class="container">
             <div class="thumbnails text-center">
-              <img src="images_q/fatthin.jpg" class="img-thumbnail " alt="fat and thin brothers" width="304"
-                height="236">
+              <img src="images_q/fatthin.jpg" class="img-thumbnail " alt="fat and thin brothers" width="304" height="236">
             </div>
             <div class="container mt-3 bg-light shadow p-4">
               <p class="lead pt-3">There are two brothers, one of whom is fat and the other is thin. The elder
@@ -544,31 +466,26 @@
         <input name="startTime" id="startTime" type="hidden">
         <input name="stopTime" id="stopTime" type="hidden">
 
-        <input name="name" id="name" type="hidden" value="<?php echo $name; ?>">
-        <input name="matricNo" id="matricNo" type="hidden" value="<?php echo $matricNo; ?>">
 
+        <div class="mt-3 mb-3" style="overflow:auto;">
+          <div style="float:right;">
+            <button class="btn btn-secondary" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button class="btn btn-secondary" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            <button name="submit" class="btn btn-secondary" type="submit" id="submitBtn" onclick="getEndTime()">Confirm</button>
+          </div>
+        </div>
+      </div>
 
     </form>
-    <div class="mt-3 mb-3" style="overflow:auto;">
-      <div style="float:right;">
-        <button class="btn btn-secondary" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-        <button class="btn btn-secondary" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-      </div>
-    </div>
-  </div>
-
   </div>
 
   <script src="questions.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>
