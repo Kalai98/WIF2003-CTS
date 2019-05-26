@@ -53,8 +53,17 @@ if(!empty($_SESSION['MatricNo'])){
         else if ($_GET['error'] == 'wrongPassword') {
           echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">Password Incorrect<button type="button" class="close btn-sm" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
         }
-        
+
       }
+
+      // Message after create new account
+      else if(isset($_GET['register'])){
+
+        if($_GET['register'] == 'success'){
+          echo '<div class="alert alert-success alert-dismissible fade show" role="alert">Thank you for registering! <button type="button" class="close btn-sm" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+        } 
+      }
+
       ?>
       <div class="form-group">
         <input name="login" class="form-control" type="text" placeholder="E-mail or Username" required>

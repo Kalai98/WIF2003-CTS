@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
     
     //INSERT INTO DB
     if(mysqli_query($conn, $query)){
-      header('Location: '.ROOT_URL.'signup/signup.php?register=success');
+      header('Location: '.ROOT_URL.'login/index.php?register=success');
     }else{
         echo 'ERROR'. mysqli_error($conn);
     }

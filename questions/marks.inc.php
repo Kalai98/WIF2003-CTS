@@ -29,12 +29,21 @@ if(isset($_POST['submit'])){
     $duration = mysqli_real_escape_string($conn,$_POST['duration']);
     $startTime = mysqli_real_escape_string($conn,$_POST['startTime']);
     $stopTime = mysqli_real_escape_string($conn,$_POST['stopTime']);
-    
+    $grade = 0;
 
-    $grade = '8';
+    // Check for answers
+    $a1 == '7'? $grade++ : $grade;
+    $a2 == '187'? $grade++ : $grade;
+    $a31 == '62' && $a32 == '38'? $grade++ : $grade;
+    $a4 == '7^2=49'? $grade++ : $grade;
+    $a5 == 'c and d'? $grade++ : $grade;
+    strtolower($a6) == 'gold'? $grade++ : $grade;
+    strtolower($a81) == 'fortune teller' && strtolower($a82) == 'novelist' &&  strtolower($a83) == 'dancer' && strtolower($a84) == 'tv host' && strtolower($a85) == 'd will not marry mr. p'? $grade++ : $grade;
+    strtolower($a91) == 'morning' && strtolower($a92) == 'fat one'? $grade++ : $grade;
+
     $matric_no = mysqli_real_escape_string($conn, $_SESSION['MatricNo']);
     $name = mysqli_real_escape_string($conn,$_SESSION['Name']);
-    $percentage = '100';
+    $percentage = $grade/8 * 100;
 
     $queryResult = "INSERT INTO results(Matric_No, Duration, Start_Time, Stop_Time, Grade) VALUES('$matric_no', '$duration', '$startTime', '$stopTime', '$grade')";
     
