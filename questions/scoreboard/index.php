@@ -30,6 +30,18 @@ $num = 0;
     <title>Hello, world!</title>
 </head>
 
+<style>
+
+body{
+    background: url(../images_q/background.jpg);
+}
+
+#title{
+    margin: auto;
+}
+
+</style>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="./">Critical Thinking Test</a>
@@ -56,7 +68,7 @@ $num = 0;
     </nav>
     <div class="container">
         <div id="" class="tab">
-            <h1 class="mt-4">Scoreboard</h1>
+            <h1 id="title" style="width: 30%;" class="mt-4 mb-4 text-center text-dark bg-light shadow p-3">Scoreboard</h1>
             <table class=" shadow table table-light table-hover table-borderless text-center">
                 <thead>
                     <tr class="d-flex bg-dark text-white">
@@ -64,7 +76,7 @@ $num = 0;
                         <th class="col-3" scope="col">Matric No.</th>
                         <th class="col-3" scope="col">Name</th>
                         <th class="col-3" scope="col">Time Taken</th>
-                        <th class="col-2" scope="col">Grade</th>
+                        <th class="col-2" scope="col">Score</th>
                     </tr>
                 </thead>
                 <tbody>

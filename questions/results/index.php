@@ -63,7 +63,7 @@ body{
     <div class="container mt-5">
 
         <div class="card p-5 shadow-lg mb-4">
-            <h1>Your past results, <?php echo $name; ?></h1>
+            <h1 class="mb-4">Your past results, <?php echo $name; ?></h1>
     
             <?php foreach($questions as $question) : ?>
     
