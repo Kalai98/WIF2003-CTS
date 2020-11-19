@@ -78,13 +78,13 @@ if (isset($_POST['logout'])) {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?php echo ROOT_URL . "questions" ?>">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./results">Results</a>
+                    <a class="nav-link" href="<?php echo ROOT_URL . "questions/results" ?>">Results</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./scoreboard">Scoreboard</a>
+                    <a class="nav-link" href="<?php echo ROOT_URL . "questions/scoreboard" ?>">Scoreboard</a>
                 </li>
             </ul>
             <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" class="form-inline my-2 my-lg-0">

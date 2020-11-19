@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
                 $_SESSION['Email'] = $row['Email'];
                 $_SESSION['login'] = 'success';
 
-                header('Location: '.ROOT_URL.'../cts/questions/index.php?');
+                header('Location: '.ROOT_URL.'questions/index.php?');
                 exit();
             }
             
