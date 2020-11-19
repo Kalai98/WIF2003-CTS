@@ -16,7 +16,7 @@ The website is deployed on AWS EC2 using NGINX as web server.
 
 #### Contributors:
 - Afrie Irham
-- [Muhammad Noor Sufi](https://github.com/)
+- [Muhammad Noor Sufi](https://github.com/sufifisas)
 - [Adib Faris](https://github.com/adibfaris98)
 - [Zarif Nazmi](https://github.com/zarifnazmi)
 - Kalaivani
