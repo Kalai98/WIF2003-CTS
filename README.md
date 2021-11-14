@@ -19,4 +19,4 @@ The website is deployed on AWS EC2 using NGINX as web server.
 - [Muhammad Noor Sufi](https://github.com/sufifisas)
 - [Adib Faris](https://github.com/adibfaris98)
 - [Zarif Nazmi](https://github.com/zarifnazmi)
-- Kalaivani
+- [Kalaivani Ramesh](https://github.com/Kalai98)
